@@ -1,92 +1,71 @@
+/* styles */
+/* called by your view template */
+
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background: rgb(0,128,255);
-    height: 100;
-    justify-content: center;
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
 }
 
-.header {
-    height: 100px;
-    width: 100%;
-    background: #313131;
-    align-items: center;
-    margin: auto;
-    display: flex;
+h1 {
+  font-style: italic;
+  color: #373fff;
 }
 
-.logontext {
-    display: flex;
-    margin: auto;
-    position: relative;
+.bold {
+  font-weight: bold;
 }
 
-.logo {
-    width: 75px;
-    height: 75px;
-
+p {
+  max-width: 600px;
 }
 
-.text {
-    color: white;
-    display: block;
-    font-size: 2em;
-    margin-left: 15px;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
 }
 
-.button-group {
-    margin: auto;
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
 }
 
-.btn {
-    padding: 15px;
-    background: dodgerblue;
-    border-radius: 4px;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    margin-left: 5px;
-
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
 }
 
-.footer {
-    position: absolute;
-    width: 100%;
-    text-align: end;
-    background: #313131;
-    height: 100px;
-    bottom: 0;
-    color: white;
+button:hover {
+  background-color: yellow;
 }
 
-.first {
-    position: relative;
-    height: 500px;
-    width: 750px;
-    margin: 25px auto;
-    top: 100px;
-    background: #313131;
-    border-radius: 5px;
+button:active {
+  box-shadow: none;
 }
-.first h2{
-    padding-top: 25px;
-    color: white;
+
+li {
+  margin-bottom: 5px;
 }
-.desc{
-    padding-top: 25px;
-    color: white;
-}
-.desc-logo{
-    margin-top: 25px;
-    width: 250px;
-}
-.footer p  {
-    position: relative;
-    top: 80px;
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
 }
