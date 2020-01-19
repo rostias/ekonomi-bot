@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText('Banka İsmi' , 450 , 100 )  //450 x ekseninde 100 y eksenine göre ayarlamak isterseniz onlarla oynayın.
+            ctx.fillText('Banka İsmi' , 450 , 125 )  //425 x ekseninde 125 y eksenine göre ayarlamak isterseniz onlarla oynayın.
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
@@ -60,7 +60,7 @@ exports.run = async (client, message, args) => {
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Para: ${bakiye}` , canvas.width / 3.25, 650 )
+            ctx.fillText(`Para: ${bakiye}` , 400, 650 )
             
             const attachment = new Discord.Attachment(
               canvas.toBuffer(),
