@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+
+
+
 const http = require('http');
     app.get("/", (request, response) => {
     console.log(`[Woxe] 7/24 Bekliyorum...`);
@@ -125,7 +128,7 @@ client.unload = command => {
     }
   });
 };
-client.login(client.ayarlar.token); 
+
 
 
 client.on("message", message => {
@@ -396,3 +399,5 @@ client.yetkiler = message => {
   if(message.author.id === ayarlar.sahip) permlvl = 7;
   return permlvl;
 };
+
+client.login(ayarlar.token); 
