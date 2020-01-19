@@ -22,14 +22,14 @@ require('./util/WoxeLoader')(client);
 client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
 "oynuyor":"sa",
-"prefix":"!",
+"prefix":"w!",
 "sahip":"300573341591535617",
-"token":"Token"
+"token":"NjQ1OTcyNjIxOTM4MzkzMDk0.XiRmlQ.yyuMKnVExkPmeF78TQSOCFsR2Fc"
 }
 /////////////////////////////////////////////
 client.ekoayarlar = {
   parabirimi: "TL",
-  botunuzunprefixi: "!",
+  botunuzunprefixi: "w!",
   botunuzunidsi: "637943210261479424",
   botismi: "Woxe Deneme",
   renk: "RANDOM", //İNGİLİZCE TERCİH ETTİĞİNİZ RENGİ YAZINIZ! EĞER BÖYLE BIRAKIRSANIZ RASTGELE ATAR!
@@ -57,7 +57,7 @@ fs.readdir('./komutlar/', (err, files) => {
    files.forEach(f => {
     let woxeload = require(`./komutlar/${f}`);
   
-    kurulum(`Kurulan komut ~ ${woxeload.help.name}.`);
+    kurulum(`[Woxe] Kurulan komut ~ ${woxeload.help.name}.`);
     client.commands.set(woxeload.help.name, woxeload); 
     kurulum(` `);
     client.commands.set(woxeload.help.name, woxeload);
