@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
   if(isNaN(kasaid)) return message.channel.send(kasaidembeds)
   
   const kasalarfilter = kasalar.filter(x => x.kasaid == kasaid).map(x => `Kasa İsmi: **${x.isim}** Kasa Fiyatı: **${x.fiyat}** Kasa Açıklaması: **${x.açıklama}**`).join('\n ')
-  const icindekiler = require(`.././icindekiler${kasaid}`)
+  const icindekiler = require(`.././kasa${kasaid}`)
   const kasalariçindekilerfilter = icindekiler.map(x => x).join(' ')
   const embed = new Discord.RichEmbed()
   .addField(`Kasa Bilgisi (İD: ${kasaid})`, `${kasalarfilter}`)
