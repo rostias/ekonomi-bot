@@ -12,7 +12,7 @@ const http = require('http');
 const Discord =require('discord.js');
 const client = new Discord.Client();
 const chalk = require('chalk');
-const prefix = "!";
+const prefix = "w!";
 const fs = require('fs');
 const db = require("quick.db")
 const moment = require('moment');
@@ -31,7 +31,7 @@ client.ayarlar = {
 "oynuyor":"sa",
 "prefix":"w!",
 "sahip":"300573341591535617",
-"token":"NjQ1OTcyNjIxOTM4MzkzMDk0.XiRmlQ.yyuMKnVExkPmeF78TQSOCFsR2Fc"
+"token":"token giriniz"
 }
 /////////////////////////////////////////////
 client.ekoayarlar = {
@@ -125,6 +125,26 @@ client.unload = command => {
   });
 };
 client.login(client.ayarlar.token); 
+
+
+client.on("message", message => {
+  let client = message.client;
+  if (message.author.bot) return;
+  if (!message.content.startsWith(ayarlar.prefix)) return;
+  let command = message.content.split(' ')[0].slice(ayarlar.prefix.length);
+  let params = message.content.split(' ').slice(1);
+  let perms = client.yetkiler(message);
+  let cmd;
+  if (client.commands.has(command)) {
+    cmd = client.commands.get(command);
+  } else if (client.aliases.has(command)) {
+    cmd = client.commands.get(client.aliases.get(command));
+  }
+  if (cmd) {
+    if (perms < cmd.conf.permLevel) return;
+    cmd.run(client, message, params, perms);
+  }
+})
 
 client.on('message', async msg => {
 
@@ -362,3 +382,16 @@ function play(guild, song) {
   .setColor('#FF0000'));
 }
 
+client.yetkiler = message => {
+  if(!message.guild) {
+	return; }
+  let permlvl = 0;
+  if(message.member.hasPermission("MANAGE_MESSAGES")) permlvl = 1;
+  if(message.member.hasPermission("KICK_MEMBERS")) permlvl = 2;
+  if(message.member.hasPermission("BAN_MEMBERS")) permlvl = 3;
+  if(message.member.hasPermission("MANAGE_GUILD")) permlvl = 4;
+  if(message.member.hasPermission("ADMINISTRATOR")) permlvl = 5;
+  if(message.author.id === message.guild.ownerID) permlvl = 6;
+  if(message.author.id === ayarlar.sahip) permlvl = 7;
+  return permlvl;
+};
