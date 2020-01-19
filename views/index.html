@@ -1,58 +1,37 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Welcome to Glitch!</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="tr">
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>
-        A Dream of the Future
-      </h1>
+<head>
+    <meta charset="UTF-8">
+    <title>BotAdı | Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logontext">
+            <img class="logo" src=" https://cdn.discordapp.com/avatars/300573341591535617/a_1f905a91befc68cfd540f87ec76b5cb2.gif" alt="">
+            <h1 class="text">WoxeOfficial</h1>
+        </div>
+        <div class="button-group">
+            <a href="sunucu davet linki" class="btn">Katıl</a>
+            <a href="bot davet linki" class="btn">Davet Et</a>
+        </div>
     </header>
+    
+    <div class="first"  align="center">
+        <h2>WoxeOfficial</h2>
+        <p class="desc"> Bot Hakkında Açıklama</p>
+        <img class = "desc-logo" src="https://cdn.discordapp.com/avatars/300573341591535617/a_1f905a91befc68cfd540f87ec76b5cb2.gif" alt="">
+    </div>
+    
+    
+    
+    
+    <footer class="footer"><p><i class="fa fa-heart"></i> WoxeOfficial#0001</p></footer>
+    
+</body>
 
-    <main>
-      <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
-    </main>
-
-    <footer>
-      Made with <a href="https://glitch.com">Glitch</a>!
-    </footer>
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-
-  </body>
 </html>
