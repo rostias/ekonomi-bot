@@ -31,8 +31,9 @@ client.ayarlar = {
 "oynuyor":"sa",
 "prefix":"w!",
 "sahip":"300573341591535617",
-"token":"token giriniz"
+"token":""
 }
+
 /////////////////////////////////////////////
 client.ekoayarlar = {
   parabirimi: "TL",
