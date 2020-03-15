@@ -47,7 +47,7 @@ client.ayarlar = {
 "oynuyor":"sa",
 "prefix":"w!",
 "sahip":"300573341591535617",
-"token":"NjM3OTQzMjEwMjYxNDc5NDI0.XhntIg.HCCxF8vKjKVDwbRJo0alJ84UfJA"
+"token":"Token"
 }
 /////////////////////////////////////////////
 client.ekoayarlar = {
