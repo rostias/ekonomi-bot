@@ -46,8 +46,8 @@ client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
 "oynuyor":"sa",
 "prefix":"w!",
-"sahip":"300573341591535617",
-"token":"Token"
+"sahip":"559493452799279106",
+"token":"MTA0MTEwNTg4NzUxNjk2MjkwNg.G4tD-m.5O9ct6ir00MHXAZV0WwSBo--h-kWrU-1Qcoy4g"
 }
 /////////////////////////////////////////////
 client.ekoayarlar = {
